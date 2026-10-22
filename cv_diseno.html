@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículum de ejemplo de Alex García: perfil, experiencia, formación y habilidades.">
+  <title>Alex García — CV de diseño</title>
+  <style>
+    :root { color-scheme: light; --ink: #172d31; --muted: #506568; --accent: #176653; --paper: #fffefb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 48px 24px; background: #e8eeeb; color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.65; }
+    a { color: inherit; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #b3771b; outline-offset: 5px; }
+    .cv { max-width: 1020px; margin: auto; background: var(--paper); box-shadow: 0 20px 70px #172d3114; }
+    .hero { padding: 58px 60px 46px; border-top: 8px solid var(--accent); }
+    .eyebrow { margin: 0 0 18px; color: var(--accent); text-transform: uppercase; font-size: .75rem; font-weight: bold; letter-spacing: .18em; }
+    h1 { font-family: Georgia, serif; font-size: clamp(2.8rem, 7vw, 4.7rem); line-height: 1.1; letter-spacing: -.045em; margin: 0; }
+    .role { font-size: 1.2rem; color: var(--muted); margin: 16px 0 24px; }
+    .hero-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .availability { display: inline-block; background: #e5f1e9; padding: 7px 14px; border-radius: 24px; color: #24533e; font-size: .85rem; }
+    button { border: 1px solid var(--ink); background: transparent; padding: 10px 18px; font: inherit; font-size: .85rem; cursor: pointer; border-radius: 4px; }
+    button:hover { background: var(--ink); color: white; }
+    .layout { display: grid; grid-template-columns: 30% 1fr; border-top: 1px solid #dce3df; }
+    aside { padding: 36px 30px 40px; background: #f0f4f0; }
+    main { padding: 36px 46px 40px; min-width: 0; }
+    section + section { margin-top: 32px; }
+    h2 { margin: 0 0 17px; font-size: .77rem; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); }
+    h3 { margin: 0 0 4px; font-size: 1.05rem; line-height: 1.4; }
+    p { margin: 0 0 12px; }
+    address { font-style: normal; font-size: .9rem; }
+    address a { display: block; margin-top: 10px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+    .tags li { padding: 4px 10px; border: 1px solid #bdcfc5; border-radius: 4px; font-size: .8rem; }
+    .small { font-size: .87rem; color: var(--muted); }
+    .entry { border-left: 2px solid #d7e3dc; padding-left: 20px; }
+    .entry + .entry { margin-top: 24px; }
+    .date { margin: 7px 0 12px; color: var(--muted); font-size: .82rem; }
+    ul { padding-left: 20px; }
+    .entry li { margin-bottom: 7px; font-size: .92rem; }
+    footer { border-top: 1px solid #dce3df; padding: 18px 30px; font-size: .75rem; color: var(--muted); text-align: center; }
+    footer p { margin: 0; }
+    @media (max-width: 680px) {
+      body { padding: 16px 12px; }
+      .hero { padding: 32px 24px; }
+      .layout { grid-template-columns: 1fr; }
+      aside, main { padding: 28px 24px; }
+    }
+    @media print {
+      body { padding: 0; background: white; font-size: 10pt; }
+      .cv { box-shadow: none; max-width: none; }
+      .hero { padding: 24px 30px; }
+      h1 { font-size: 38pt; }
+      .layout { grid-template-columns: 30% 1fr; }
+      aside, main { padding: 24px; }
+      button { display: none; }
+      section, .entry { break-inside: avoid; }
+      @page { margin: 12mm; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Plantilla con datos ficticios: personaliza textos y enlaces. -->
+  <div class="cv">
+    <header class="hero">
+      <p class="eyebrow">Currículum · Desarrollo web</p>
+      <h1>Alex García<span style="color: var(--accent)">.</span></h1>
+      <p class="role">Desarrollador web junior · Interfaces claras, experiencias cercanas</p>
+      <div class="hero-bottom">
+        <span class="availability">Disponible para nuevas oportunidades</span>
+        <button type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
+      </div>
+    </header>
+    <div class="layout">
+      <aside aria-label="Información personal y habilidades">
+        <section aria-labelledby="contacto">
+          <h2 id="contacto">Contacto</h2>
+          <address>Madrid, España
+            <a href="mailto:alex@example.com">alex@example.com</a>
+            <a href="tel:+34600000000">+34 600 000 000</a>
+          </address>
+        </section>
+        <section aria-labelledby="habilidades">
+          <h2 id="habilidades">Habilidades</h2>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>Diseño adaptable</li><li>Accesibilidad</li></ul>
+        </section>
+        <section aria-labelledby="idiomas">
+          <h2 id="idiomas">Idiomas</h2>
+          <p>Español<br><span class="small">Nativo</span></p>
+          <p>Inglés<br><span class="small">Intermedio · B1</span></p>
+        </section>
+        <section aria-labelledby="intereses">
+          <h2 id="intereses">Intereses</h2>
+          <p class="small">Diseño de interfaces, tecnología educativa y aprendizaje continuo.</p>
+        </section>
+      </aside>
+      <main>
+        <section aria-labelledby="perfil">
+          <h2 id="perfil">Sobre mí</h2>
+          <p>Me gusta convertir ideas en páginas sencillas y útiles. Trabajo con HTML, CSS y JavaScript, cuidando tanto la estructura como los pequeños detalles que facilitan la navegación.</p>
+          <p class="small">Busco un equipo donde aportar curiosidad, organización y ganas de seguir creciendo como desarrollador.</p>
+        </section>
+        <section aria-labelledby="experiencia">
+          <h2 id="experiencia">Experiencia</h2>
+          <article class="entry">
+            <h3>Desarrollador web en prácticas</h3>
+            <p class="small">Estudio Creativo · Madrid</p>
+            <p class="date"><time datetime="2025-03">Marzo 2025</time> — <time datetime="2025-09">Septiembre 2025</time></p>
+            <ul><li>Maqueté páginas con HTML semántico y CSS.</li><li>Adapté interfaces a móviles y tabletas.</li><li>Colaboré en la revisión de enlaces, formularios y contenido.</li></ul>
+          </article>
+        </section>
+        <section aria-labelledby="proyectos">
+          <h2 id="proyectos">Proyecto destacado</h2>
+          <article class="entry">
+            <h3>Catálogo de una librería local</h3>
+            <p class="date">Proyecto académico · 2025</p>
+            <p class="small">Diseño de un catálogo adaptable con fichas de libros, navegación por categorías y un formulario de contacto.</p>
+          </article>
+        </section>
+        <section aria-labelledby="formacion">
+          <h2 id="formacion">Formación</h2>
+          <article class="entry">
+            <h3>Desarrollo de Aplicaciones Web</h3>
+            <p class="small">Técnico Superior · Centro de Formación Ejemplo</p>
+            <p class="date">2023 — 2025</p>
+          </article>
+        </section>
+      </main>
+    </div>
+    <footer><p>Datos ficticios · Plantilla de CV para personalizar</p></footer>
+  </div>
+</body>
+</html>
