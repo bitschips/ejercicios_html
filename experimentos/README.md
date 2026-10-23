@@ -1,6 +1,6 @@
 # Carga de baterías
 
-**Versión:** 1.1.1  
+**Versión:** 1.2.0  
 **Fecha:** 23/10/2026  
 **Tipo:** aplicación web progresiva (PWA), pensada para Android.
 
@@ -21,7 +21,12 @@ El formulario permite elegir **AAA, AA, A, Sub-C, C, D, 9 V (PP3), 18650, 21700,
 
 El campo **Identificación de batería** permite distinguir baterías de igual capacidad, por ejemplo «taladro antiguo» o «comprada en MediaMarkt».
 
+## Idioma de la aplicación
+La interfaz está disponible en **inglés**. Los datos almacenados y el XML no cambian por el idioma de la interfaz. Las fechas siguen en formato día/mes/año.
+
 ## Almacenamiento y copias
+**Aviso visible al pie:** los experimentos deben exportarse a XML y guardarse fuera del navegador para conservarlos al cambiar de móvil. Borrar únicamente archivos e imágenes en caché normalmente no elimina localStorage, pero borrar datos del sitio sí puede hacerlo.
+
 Los registros se guardan en **localStorage** del navegador del dispositivo. Persisten al cerrar la pestaña, pero pueden perderse al borrar los datos del sitio, desinstalar el navegador o restablecer el móvil. No se sincronizan automáticamente entre dispositivos ni se publican en GitHub.
 
 - **Exportar XML:** descarga todos los experimentos en un archivo XML que puedes conservar o compartir como copia de seguridad.
@@ -41,6 +46,9 @@ Abre https://bitschips.github.io/ejercicios_html/experimentos/ en Chrome. Con Gi
 **Luis T Escolar** · [Canal de YouTube Bits Chips](https://www.youtube.com/BitsChips). El nombre y el enlace aparecen en el pie de la aplicación, encima de la versión.
 
 ## Versionado
+**1.2.0 (23/10/2026):** interfaz y mensajes en inglés, inglés como idioma predeterminado, aviso visible de conservación de datos y copias XML antes del autor, documentación actualizada.
+
+
 **1.1.1 (23/10/2026):** añadido nombre del autor y enlace al canal de YouTube en el pie de página; manual actualizado.
 
 **1.1.0 (23/10/2026):** añadido formato físico de pila, visible en la tarjeta y conservado en XML; documentación actualizada.\n\n**1.0.0 (23/10/2026):** versión documentada inicial. Registro de experimentos, estados en curso/finalizado, fechas en formato español, cálculos orientativos, importación/exportación XML, instalación PWA y visualización del número de versión en el pie.
