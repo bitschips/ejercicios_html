@@ -1,1 +1,1 @@
-{"name":"Carga de baterías","short_name":"Baterías","start_url":"./index.html","display":"standalone","background_color":"#f1f5f2","theme_color":"#246b55","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{"name":"Battery Charging Log","short_name":"Baterías","start_url":"./index.html","display":"standalone","background_color":"#f1f5f2","theme_color":"#246b55","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
