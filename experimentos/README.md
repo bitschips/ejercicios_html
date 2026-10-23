@@ -1,6 +1,6 @@
-# Carga de baterías
+# 🔬🔋 Battery Charging Experiments
 
-**Versión:** 1.2.1  
+**Versión:** 1.2.2  
 **Fecha:** 23/10/2026  
 **Tipo:** aplicación web progresiva (PWA), pensada para Android.
 
@@ -48,7 +48,12 @@ Abre https://bitschips.github.io/ejercicios_html/experimentos/ en Chrome. Con Gi
 ## Manual desde la aplicación
 En el pie de la aplicación hay un enlace **User manual (README)** que abre este manual Markdown en GitHub en una nueva pestaña. Se requiere conexión para consultar GitHub.
 
+## Iconos del título
+El encabezado y el título de la pestaña muestran 🔬🔋, que representan los experimentos y las baterías.
+
 ## Versionado
+**1.2.2 (23/10/2026):** añadidos iconos de microscopio y batería al título de la aplicación y de la pestaña; versión y manual actualizados.
+
 **1.2.1 (23/10/2026):** enlace directo al manual Markdown en el pie de la aplicación; documentación actualizada.
 
 **1.2.0 (23/10/2026):** interfaz y mensajes en inglés, inglés como idioma predeterminado, aviso visible de conservación de datos y copias XML antes del autor, documentación actualizada.
