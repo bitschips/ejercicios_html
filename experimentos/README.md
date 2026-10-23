@@ -1,6 +1,6 @@
 # 🔬🔋 Battery Charging Experiments
 
-**Versión:** 1.2.3  
+**Versión:** 1.2.4  
 **Fecha:** 23/10/2026  
 **Tipo:** aplicación web progresiva (PWA), pensada para Android.
 
@@ -40,7 +40,8 @@ Abre https://bitschips.github.io/ejercicios_html/experimentos/ en Chrome. Con Gi
 - `app.js`: lógica de registros, cálculos, localStorage e importación/exportación XML.
 - `manifest.webmanifest`: nombre y configuración de instalación PWA.
 - `sw.js`: almacenamiento en caché para uso sin conexión.
-- `icon.svg`: icono.
+- `icon.svg`: icono de instalación.
+- `brand-icon.svg`: imagen única de la cabecera.
 
 ## Autor y canal
 **Luis T Escolar** · [Canal de YouTube Bits Chips](https://www.youtube.com/BitsChips). El nombre y el enlace aparecen en el pie de la aplicación, encima de la versión.
@@ -49,9 +50,11 @@ Abre https://bitschips.github.io/ejercicios_html/experimentos/ en Chrome. Con Gi
 En el pie de la aplicación hay un enlace **User manual (README)** que abre este manual Markdown en GitHub en una nueva pestaña. Se requiere conexión para consultar GitHub.
 
 ## Iconos del título
-La cabecera presenta un bloque visual con 🔬🔋 a la izquierda y, a la derecha, el título y subtítulo alineados. El diseño usa Flexbox y se adapta a pantallas pequeñas. El título de la pestaña conserva los iconos.
+La cabecera presenta una imagen SVG única (batería, matraz y rayo sobre fondo rojo) a la izquierda y, a la derecha, el título y subtítulo alineados. El diseño usa Flexbox y se adapta a pantallas pequeñas. El título de la pestaña conserva los iconos.
 
 ## Versionado
+**1.2.4 (23/10/2026):** sustituido el par de emojis de la cabecera por un icono SVG único y adaptable; manual y caché actualizados.
+
 **1.2.3 (23/10/2026):** cabecera responsive con iconos en un bloque independiente y título/subtítulo alineados a la derecha; manual actualizado.
 
 **1.2.2 (23/10/2026):** añadidos iconos de microscopio y batería al título de la aplicación y de la pestaña; versión y manual actualizados.
