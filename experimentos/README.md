@@ -1,6 +1,6 @@
 # Carga de baterías
 
-**Versión:** 1.1.0  
+**Versión:** 1.1.1  
 **Fecha:** 23/10/2026  
 **Tipo:** aplicación web progresiva (PWA), pensada para Android.
 
@@ -37,7 +37,12 @@ Abre https://bitschips.github.io/ejercicios_html/experimentos/ en Chrome. Con Gi
 - `sw.js`: almacenamiento en caché para uso sin conexión.
 - `icon.svg`: icono.
 
+## Autor y canal
+**Luis T Escolar** · [Canal de YouTube Bits Chips](https://www.youtube.com/BitsChips). El nombre y el enlace aparecen en el pie de la aplicación, encima de la versión.
+
 ## Versionado
+**1.1.1 (23/10/2026):** añadido nombre del autor y enlace al canal de YouTube en el pie de página; manual actualizado.
+
 **1.1.0 (23/10/2026):** añadido formato físico de pila, visible en la tarjeta y conservado en XML; documentación actualizada.\n\n**1.0.0 (23/10/2026):** versión documentada inicial. Registro de experimentos, estados en curso/finalizado, fechas en formato español, cálculos orientativos, importación/exportación XML, instalación PWA y visualización del número de versión en el pie.
 
 El número de versión visible está en el pie de la aplicación. En futuras actualizaciones conviene modificar también este archivo y la versión mostrada.
