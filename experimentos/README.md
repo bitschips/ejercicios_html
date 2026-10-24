@@ -1,11 +1,14 @@
 # 🔬🔋 Battery Charging Experiments
 
-**Versión:** 1.2.4  
-**Fecha:** 23/10/2026  
+**Versión:** 1.3.0  
+**Fecha:** 24/10/2026  
 **Tipo:** aplicación web progresiva (PWA), pensada para Android.
 
 ## Descripción
 Cuaderno digital para registrar experimentos de carga de pilas y baterías. Permite crear, consultar, editar, finalizar y eliminar experimentos desde el móvil, sin cuenta ni servidor de datos.
+
+## Pestañas de carga y autonomía
+La aplicación muestra dos pestañas independientes: **Charging** y **Autonomy**. Los registros anteriores se consideran experimentos de carga y se mantienen en el mismo almacenamiento local. En autonomía se introduce el dispositivo o lámpara, la tensión inicial, la hora de inicio, la hora de fin y la tensión final. La duración se calcula automáticamente, sin estimar capacidad ni registrar aporte solar. Ambas categorías se incluyen en exportación e importación XML mediante el campo `clase`; los XML antiguos siguen siendo compatibles.
 
 ## Uso
 1. Abre la aplicación y pulsa **+** para crear un experimento.
@@ -53,6 +56,8 @@ En el pie de la aplicación hay un enlace **User manual (README)** que abre este
 La cabecera presenta una imagen SVG única (batería, matraz y rayo sobre fondo rojo) a la izquierda y, a la derecha, el título y subtítulo alineados. El diseño usa Flexbox y se adapta a pantallas pequeñas. El título de la pestaña conserva los iconos.
 
 ## Versionado
+**1.3.0 (24/10/2026):** pestañas Charging y Autonomy, registro de dispositivo y duración de descarga, XML compatible con registros anteriores y actualización de caché PWA.
+
 **1.2.4 (23/10/2026):** sustituido el par de emojis de la cabecera por un icono SVG único y adaptable; manual y caché actualizados.
 
 **1.2.3 (23/10/2026):** cabecera responsive con iconos en un bloque independiente y título/subtítulo alineados a la derecha; manual actualizado.
