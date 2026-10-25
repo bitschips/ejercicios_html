@@ -2,7 +2,7 @@
 
 # 🔬🔋 Experimentos de carga y autonomía de baterías
 
-**Versión:** 1.4.3  
+**Versión:** 1.4.4  
 **Fecha:** 25/10/2026  
 **Tipo:** aplicación web progresiva (PWA), pensada para Android.
 
@@ -67,7 +67,7 @@ En el pie de la aplicación hay un enlace **User manual (README)** que abre este
 La cabecera presenta una imagen SVG única (batería, matraz y rayo sobre fondo rojo) a la izquierda y, a la derecha, el título y subtítulo alineados. El diseño usa Flexbox y se adapta a pantallas pequeñas. El título de la pestaña conserva los iconos.
 
 ## Versionado
-**1.4.3 (25/10/2026):** diferenciadas las pilas de botón genéricas y recargables, conservando CR2032.
+**1.4.4 (25/10/2026):** diferenciadas las pilas de botón genéricas y recargables, conservando CR2032.
 
 **1.4.2 (25/10/2026):** añadido el formato genérico de pila de botón (Button cell) al selector, manteniendo CR2032 como opción específica.
 
@@ -98,3 +98,6 @@ El número de versión visible está en el pie de la aplicación. En futuras act
 
 ## Aviso
 La aplicación es un cuaderno de registro, no un controlador de carga. Usa siempre un cargador y límites de tensión/corriente apropiados para la química de cada batería.
+
+## Vincular autonomía con una carga completada (v1.4.4)
+Al crear o editar un experimento de autonomía, puedes seleccionar opcionalmente una carga completada. Solo aparecen cargas finalizadas, de más reciente a más antigua. Se copian la química, el formato, la capacidad y la identificación de la batería; el voltaje final de carga pasa a ser el voltaje inicial de autonomía. Todos los valores se pueden modificar. Con **None — Enter details manually** puedes introducirlos manualmente. El vínculo se conserva al exportar e importar XML; los experimentos anteriores siguen siendo compatibles.
