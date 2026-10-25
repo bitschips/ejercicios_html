@@ -2,7 +2,7 @@
 
 **English** | [Español](README.es.md)
 
-**Version:** 1.4.3  
+**Version:** 1.4.4  
 **Date:** 25/10/2026  
 **Type:** Progressive Web App (PWA), designed for Android.
 
@@ -64,7 +64,7 @@ Open https://bitschips.github.io/ejercicios_html/experimentos/ in Chrome. You ca
 **Luis T Escolar** · [Bits Chips YouTube channel](https://www.youtube.com/BitsChips).
 
 ## Version history
-**1.4.3 (25/10/2026):** Separate generic and rechargeable button-cell formats; CR2032 remains available.
+**1.4.4 (25/10/2026):** Separate generic and rechargeable button-cell formats; CR2032 remains available.
 
 **1.4.2 (25/10/2026):** Added generic Button cell to the battery size selector while retaining CR2032 as a specific option.
 
@@ -96,3 +96,6 @@ When changing the application, update both manuals and the version history.
 
 ## Safety
 This app is a record-keeping notebook, **not a charging controller**. Always use appropriate charging hardware and voltage/current limits for each battery chemistry.
+
+## Linking autonomy to a completed charge (v1.4.4)
+When creating or editing an autonomy experiment, optionally select a completed charging experiment. Only completed charges appear, newest first. The battery chemistry, format, capacity and identification are copied, and the charging experiment's final voltage becomes the autonomy initial voltage. You may edit any copied value. Choose **None — Enter details manually** to enter all fields yourself. The link is saved and included in XML export/import; existing experiments remain compatible.
