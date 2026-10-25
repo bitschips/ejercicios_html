@@ -1,0 +1,24 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Diagrama de funcionamiento · Battery Experiments</title><style>body{font:16px system-ui,sans-serif;max-width:1100px;margin:auto;padding:20px;background:#f4f8f6;color:#20372d}h1{font-size:1.6rem}a{color:#145d47}.box{background:white;border:1px solid #d2dfd7;border-radius:12px;padding:12px;overflow-x:auto}p{line-height:1.6}</style></head><body><p><a href="./index.html">← Volver a la aplicación</a> · <a href="./README.es.md">Manual en español</a></p><h1>Funcionamiento de Battery Experiments</h1><p>Diagrama de flujo de carga, autonomía, vinculación opcional y copias de seguridad.</p><div class="box"><pre class="mermaid">flowchart TD
+ A["Abrir aplicación"] --> B{"Pestaña"}
+ B --> C["Carga"]
+ B --> D["Autonomía"]
+ C --> E["Registrar datos de batería, tensión y corriente"]
+ E --> F["Guardar carga en progreso"]
+ F --> G["Registrar fin y tensión final"]
+ G --> H["Carga completada"]
+ D --> I["Nuevo experimento de autonomía"]
+ I --> J{"¿Seleccionar carga completada?"}
+ J -->|Sí| K["Elegir carga terminada"]
+ H -.-> K
+ K --> L["Autorrellenar batería y tensión inicial"]
+ J -->|No| M["Rellenar datos manualmente"]
+ L --> N["Ajustar datos y registrar dispositivo"]
+ M --> N
+ N --> O["Guardar autonomía en progreso"]
+ O --> P["Registrar fin y tensión final"]
+ P --> Q["Autonomía completada"]
+ H --> R["Consultar y editar tarjetas"]
+ Q --> R
+ R --> S["Almacenamiento local del navegador"]
+ S <--> T["Exportar e importar XML"]
+</pre></div><p>La selección de una carga anterior es opcional. Solo aparecen las cargas completadas. Los datos copiados se pueden modificar.</p><script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'strict',theme:'neutral'});</script></body></html>
