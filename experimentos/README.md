@@ -1,94 +1,94 @@
-# 🔬🔋 Battery Charging Experiments
+# 🔬🔋 Battery Charging and Autonomy Experiments
 
-**Versión:** 1.4.1  
-**Fecha:** 25/10/2026  
-**Tipo:** aplicación web progresiva (PWA), pensada para Android.
+**English** | [Español](README.es.md)
 
-## Descripción
-Cuaderno digital para registrar experimentos de carga de pilas y baterías. Permite crear, consultar, editar, finalizar y eliminar experimentos desde el móvil, sin cuenta ni servidor de datos.
+**Version:** 1.4.1  
+**Date:** 25/10/2026  
+**Type:** Progressive Web App (PWA), designed for Android.
 
-## Pestañas de carga y autonomía
-La aplicación muestra dos pestañas independientes: **Charging** y **Autonomy**. Los registros anteriores se consideran experimentos de carga y se mantienen en el mismo almacenamiento local. En autonomía se introduce el dispositivo o lámpara, la tensión inicial, la hora de inicio, la hora de fin y la tensión final. La duración se calcula automáticamente, sin estimar capacidad ni registrar aporte solar. Ambas categorías se incluyen en exportación e importación XML mediante el campo `clase`; los XML antiguos siguen siendo compatibles.
+## Overview
+A browser-based lab notebook for battery charging and device runtime experiments. Create, view, edit, complete and delete experiments without an account or backend.
 
-## Uso
-1. Abre la aplicación y pulsa **+** para crear un experimento.
-2. Introduce el tipo de pila (química), formato físico y capacidad nominal (mAh), tensión inicial (V), tensión de carga (V), intensidad de carga (mA) y fecha y hora de inicio.
-3. Pulsa **Guardar**. El experimento aparece como **En curso**, destacado en rojo.
-4. Para terminarlo, pulsa **Editar / finalizar**, indica fecha y hora de fin y tensión final, y guarda. Pasará a **Finalizado**.
-5. Puedes añadir observaciones o eliminar una ficha (con confirmación).
+## Charging and autonomy
+Use the **Charging** tab to track a battery's charging process: chemistry, size, nominal capacity, battery identification, initial voltage, charging voltage, charging current, start/end timestamps, final voltage and notes.
 
-Las tarjetas muestran la fecha de inicio en formato **dd/mm/aa** y una etiqueta roja (**In progress**) o verde (**Completed**), según el estado. Si se introduce una hora de fin y una corriente de carga, se calculan la duración y una **carga estimada en mAh**, suponiendo corriente constante: mAh = mA × horas. No es una medición real de capacidad ni de eficiencia de carga.
+Use **Autonomy** to record how long a device or lamp runs on a battery: device, battery details, initial/final voltage and start/end timestamps. Runtime is calculated from the timestamps. Previous records are treated as charging experiments. Both types are preserved in XML backups.
 
-## Tarjetas desplegables y fotografías
-Cada experimento se presenta como una tarjeta desplegable. La vista compacta muestra el número, la identificación, una fotografía (si existe), el estado, la fecha y la duración cuando está finalizado. Al tocar la tarjeta se despliegan los valores eléctricos, la carga estimada cuando procede, las observaciones y los botones para editar, finalizar o eliminar.
+## Getting started
+1. Open [Battery Experiments](https://bitschips.github.io/ejercicios_html/experimentos/).
+2. Select **Charging** or **Autonomy** and tap **+**.
+3. Enter the battery and experiment details and tap **Save**.
+4. To finish, open the card and select **Edit / finish**, enter the end time and final voltage, then save.
+5. Use the expanded card to review values, notes, and edit/delete actions.
 
-En **Charging**, bajo el número del experimento aparece la identificación de la batería (o su química, formato y capacidad si no tiene identificación). En **Autonomy**, aparece **Dispositivo @ Batería** para identificar el montaje de descarga.
+**In progress** is shown in red; **Completed** in green. Dates on cards use **dd/mm/yy**. Completed experiments show their duration. For charging experiments with a recorded current, estimated charge is calculated as **mAh = mA × hours**, assuming constant current. This is not a measured battery capacity or charging efficiency.
 
-Cada experimento admite **una fotografía**. Desde el formulario, pulsa **Experiment photo**, toma una foto con la cámara o selecciona una imagen; se muestra una vista previa y puedes quitarla con **Remove photo**. La imagen se reduce automáticamente a un máximo de **800 píxeles en su lado más largo** y se comprime como **JPEG al 55 % de calidad**. La fotografía permanece visible incluso con la tarjeta contraída.
+## Expandable cards
+Cards show experiment number, identification, optional photo, status, date and (when available) duration while collapsed. Tap a card to expand voltage and current readings, estimated charge (if applicable), notes and action buttons.
 
-La foto se almacena junto con el experimento en el navegador y se incluye en el XML como datos JPEG codificados en Base64. **Export XML** permite respaldar también las fotos e **Import XML** las restaura. Los XML antiguos sin fotografías siguen siendo compatibles. Las imágenes aumentan el tamaño de los datos y pueden agotar el espacio disponible en localStorage; conviene exportar copias periódicamente.
+Under the experiment number, **Charging** shows battery identification, falling back to chemistry, size and capacity. **Autonomy** shows **Device @ Battery**.
 
-## Formato de pila
-El formulario permite elegir **AAA, AA, A, Sub-C, C, D, 9 V (PP3), 18650, 21700, 26650, CR2032, prismática, bolsa (pouch) u otro**. El formato es independiente de la química y de la capacidad. Se muestra en el título de cada experimento y se incluye en las exportaciones e importaciones XML. Los registros antiguos siguen siendo compatibles y muestran el formato vacío hasta que se editen.
+## Experiment photos
+Each experiment supports **one photo**, visible even when its card is collapsed. In the edit form, choose **Experiment photo** to take a picture or select an existing image; use **Remove photo** to clear it. Images are automatically resized to a maximum of **800 pixels on the longest side** and compressed to **JPEG quality 55%**.
 
-El campo **Identificación de batería** permite distinguir baterías de igual capacidad, por ejemplo «taladro antiguo» o «comprada en MediaMarkt».
+Photos are stored locally with the records and included in exported XML as Base64-encoded JPEG data. XML import restores them; older XML backups without photos remain compatible. Photos consume browser storage, so export backups regularly.
 
-## Idioma de la aplicación
-La interfaz está disponible en **inglés**. Los datos almacenados y el XML no cambian por el idioma de la interfaz. Las fechas siguen en formato día/mes/año.
+## Battery details
+Supported battery formats include AAA, AA, A, Sub-C, C, D, 9 V (PP3), 18650, 21700, 26650, CR2032, prismatic, pouch and other. Size is separate from chemistry and capacity. The **Battery identification** field distinguishes individual batteries (for example, “old drill battery”).
 
-## Almacenamiento y copias
-**Aviso visible al pie:** los experimentos deben exportarse a XML y guardarse fuera del navegador para conservarlos al cambiar de móvil. Borrar únicamente archivos e imágenes en caché normalmente no elimina localStorage, pero borrar datos del sitio sí puede hacerlo.
+## Language
+The app interface is in English. The documentation is available in English and Spanish. Switching documentation language does not change stored data or XML.
 
-Los registros se guardan en **localStorage** del navegador del dispositivo. Persisten al cerrar la pestaña, pero pueden perderse al borrar los datos del sitio, desinstalar el navegador o restablecer el móvil. No se sincronizan automáticamente entre dispositivos ni se publican en GitHub.
+## Local storage and XML backups
+Records and photos are saved in your browser's **localStorage**, not on GitHub or a server. They persist across normal browser restarts but may be lost if site data is cleared, the browser is uninstalled, or the phone is reset. Clearing cached files alone does not normally remove localStorage.
 
-- **Exportar XML:** descarga todos los experimentos en un archivo XML que puedes conservar o compartir como copia de seguridad.
-- **Importar XML:** permite **COMBINAR** registros (sin duplicar identificadores) o **SUSTITUIR** los registros existentes. Exporta una copia antes de sustituir.
+- **Export XML** downloads all experiments, including photos, as a backup.
+- **Import XML** supports **MERGE** (skip existing IDs) or **REPLACE** (overwrite local records). Export a backup before replacing.
 
-## Instalación y uso sin conexión
-Abre https://bitschips.github.io/ejercicios_html/experimentos/ en Chrome. Con GitHub Pages (HTTPS), la PWA puede añadirse a la pantalla de inicio. Un service worker almacena recursos para facilitar el uso sin conexión después de la primera carga; las actualizaciones pueden tardar en aparecer por la caché.
+Back up the XML outside your browser, such as to another device or cloud storage. Data does not automatically sync between phones.
 
-## Archivos
-- `index.html`: interfaz, formulario y estilos.
-- `app.js`: lógica de registros, cálculos, localStorage e importación/exportación XML.
-- `manifest.webmanifest`: nombre y configuración de instalación PWA.
-- `sw.js`: almacenamiento en caché para uso sin conexión.
-- `icon.svg`: icono de instalación.
-- `brand-icon.svg`: imagen única de la cabecera.
+## Installation and offline use
+Open https://bitschips.github.io/ejercicios_html/experimentos/ in Chrome. You can add the PWA to your home screen. A service worker caches application resources for offline use after the first visit; updates may take time to appear because of caching. The footer's **User manual (README)** link opens this GitHub documentation and requires internet access.
 
-## Autor y canal
-**Luis T Escolar** · [Canal de YouTube Bits Chips](https://www.youtube.com/BitsChips). El nombre y el enlace aparecen en el pie de la aplicación, encima de la versión.
+## Project files
+- `index.html`: user interface, form and styling.
+- `app.js`: experiment logic, calculations, localStorage and XML import/export.
+- `manifest.webmanifest`: PWA installation metadata.
+- `sw.js`: offline cache.
+- `icon.svg`: installation icon.
+- `brand-icon.svg`: header illustration.
+- `README.md`: English manual.
+- `README.es.md`: Spanish manual.
 
-## Manual desde la aplicación
-En el pie de la aplicación hay un enlace **User manual (README)** que abre este manual Markdown en GitHub en una nueva pestaña. Se requiere conexión para consultar GitHub.
+## Author
+**Luis T Escolar** · [Bits Chips YouTube channel](https://www.youtube.com/BitsChips).
 
-## Iconos del título
-La cabecera presenta una imagen SVG única (batería, matraz y rayo sobre fondo rojo) a la izquierda y, a la derecha, el título y subtítulo alineados. El diseño usa Flexbox y se adapta a pantallas pequeñas. El título de la pestaña conserva los iconos.
+## Version history
+**1.4.1 (25/10/2026):** Expandable experiment cards with photo, identification, status, date and duration in the collapsed view; detailed measurements and actions when expanded.
 
-## Versionado
-**1.4.1 (25/10/2026):** tarjetas desplegables con fotografía, identificación, estado, fecha y duración en la vista compacta; detalles y acciones al expandir.
+**1.4.0 (25/10/2026):** One automatically compressed JPEG photo per experiment (800 px maximum, 55% quality), stored locally and included in XML import/export, compatible with older backups.
 
-**1.4.0 (25/10/2026):** una fotografía comprimida por experimento (JPEG, 800 px máximo, calidad 55 %), guardada localmente e incluida en exportación e importación XML; compatibilidad con copias antiguas.
+**1.3.1 (25/10/2026):** Red/green status indicators, dd/mm/yy dates, battery identification for charging and “Device @ Battery” for autonomy.
 
-**1.3.1 (25/10/2026):** indicadores rojo/verde según el estado, fecha dd/mm/aa, identificación de batería en carga y «Dispositivo @ Batería» en autonomía.
+**1.3.0 (24/10/2026):** Charging and Autonomy tabs, device runtime, backwards-compatible XML and PWA cache update.
 
-**1.3.0 (24/10/2026):** pestañas Charging y Autonomy, registro de dispositivo y duración de descarga, XML compatible con registros anteriores y actualización de caché PWA.
+**1.2.4 (23/10/2026):** Unified SVG header icon; manual and cache updated.
 
-**1.2.4 (23/10/2026):** sustituido el par de emojis de la cabecera por un icono SVG único y adaptable; manual y caché actualizados.
+**1.2.3 (23/10/2026):** Responsive header layout.
 
-**1.2.3 (23/10/2026):** cabecera responsive con iconos en un bloque independiente y título/subtítulo alineados a la derecha; manual actualizado.
+**1.2.2 (23/10/2026):** Microscope and battery icons added to app title.
 
-**1.2.2 (23/10/2026):** añadidos iconos de microscopio y batería al título de la aplicación y de la pestaña; versión y manual actualizados.
+**1.2.1 (23/10/2026):** README manual link in footer.
 
-**1.2.1 (23/10/2026):** enlace directo al manual Markdown en el pie de la aplicación; documentación actualizada.
+**1.2.0 (23/10/2026):** English interface and backup reminder.
 
-**1.2.0 (23/10/2026):** interfaz y mensajes en inglés, inglés como idioma predeterminado, aviso visible de conservación de datos y copias XML antes del autor, documentación actualizada.
+**1.1.1 (23/10/2026):** Author and YouTube channel in footer.
 
+**1.1.0 (23/10/2026):** Physical battery format added to records and XML.
 
-**1.1.1 (23/10/2026):** añadido nombre del autor y enlace al canal de YouTube en el pie de página; manual actualizado.
+**1.0.0 (23/10/2026):** Initial documented release.
 
-**1.1.0 (23/10/2026):** añadido formato físico de pila, visible en la tarjeta y conservado en XML; documentación actualizada.\n\n**1.0.0 (23/10/2026):** versión documentada inicial. Registro de experimentos, estados en curso/finalizado, fechas en formato español, cálculos orientativos, importación/exportación XML, instalación PWA y visualización del número de versión en el pie.
+When changing the application, update both manuals and the version history.
 
-El número de versión visible está en el pie de la aplicación. En futuras actualizaciones conviene modificar también este archivo y la versión mostrada.
-
-## Aviso
-La aplicación es un cuaderno de registro, no un controlador de carga. Usa siempre un cargador y límites de tensión/corriente apropiados para la química de cada batería.
+## Safety
+This app is a record-keeping notebook, **not a charging controller**. Always use appropriate charging hardware and voltage/current limits for each battery chemistry.
