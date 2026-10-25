@@ -132,3 +132,5 @@ flowchart TD
 ```
 
 La vinculación es opcional. Solo se pueden seleccionar cargas completadas y los datos copiados son editables. Ambos tipos de experimentos admiten una foto comprimida, tarjetas desplegables y copias de seguridad XML.
+
+[Ver el diagrama de funcionamiento Mermaid](diagram.html) · [Ver el código Mermaid en este manual](#diagrama-de-funcionamiento-de-la-aplicación).
