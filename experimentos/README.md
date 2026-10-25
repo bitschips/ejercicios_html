@@ -99,3 +99,34 @@ This app is a record-keeping notebook, **not a charging controller**. Always use
 
 ## Linking autonomy to a completed charge (v1.4.4)
 When creating or editing an autonomy experiment, optionally select a completed charging experiment. Only completed charges appear, newest first. The battery chemistry, format, capacity and identification are copied, and the charging experiment's final voltage becomes the autonomy initial voltage. You may edit any copied value. Choose **None — Enter details manually** to enter all fields yourself. The link is saved and included in XML export/import; existing experiments remain compatible.
+
+## Application workflow diagram
+
+```mermaid
+flowchart TD
+    A["Open Battery Experiments"] --> B{"Choose tab"}
+    B --> C["Charging"]
+    B --> D["Autonomy"]
+    C --> E["Create or edit charging experiment"]
+    E --> F["Enter battery, voltage, current and start time"]
+    F --> G["Save: In progress"]
+    G --> H["Add end time and final voltage"]
+    H --> I["Completed charge"]
+    D --> J["Create or edit autonomy experiment"]
+    J --> K{"Link completed charge?"}
+    K -->|Yes| L["Select completed charge"]
+    I -.-> L
+    L --> M["Copy battery details and final voltage as initial voltage"]
+    K -->|No| N["Enter battery details manually"]
+    M --> O["Enter device and adjust fields if needed"]
+    N --> O
+    O --> P["Save: In progress"]
+    P --> Q["Add end time and final voltage"]
+    Q --> R["Completed autonomy test"]
+    I --> S["Experiment cards with photo and expandable details"]
+    R --> S
+    S --> T["Local browser storage"]
+    T <--> U["Export / Import XML backup, including photos and links"]
+```
+
+The charge link is optional. Only completed charging experiments can be selected; all copied values remain editable. Both types of experiments support one compressed photo, expandable cards, and XML backup.
