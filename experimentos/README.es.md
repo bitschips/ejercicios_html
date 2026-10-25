@@ -2,7 +2,7 @@
 
 # 🔬🔋 Experimentos de carga y autonomía de baterías
 
-**Versión:** 1.4.1  
+**Versión:** 1.4.2  
 **Fecha:** 25/10/2026  
 **Tipo:** aplicación web progresiva (PWA), pensada para Android.
 
@@ -31,7 +31,7 @@ Cada experimento admite **una fotografía**. Desde el formulario, pulsa **Experi
 La foto se almacena junto con el experimento en el navegador y se incluye en el XML como datos JPEG codificados en Base64. **Export XML** permite respaldar también las fotos e **Import XML** las restaura. Los XML antiguos sin fotografías siguen siendo compatibles. Las imágenes aumentan el tamaño de los datos y pueden agotar el espacio disponible en localStorage; conviene exportar copias periódicamente.
 
 ## Formato de pila
-El formulario permite elegir **AAA, AA, A, Sub-C, C, D, 9 V (PP3), 18650, 21700, 26650, CR2032, prismática, bolsa (pouch) u otro**. El formato es independiente de la química y de la capacidad. Se muestra en el título de cada experimento y se incluye en las exportaciones e importaciones XML. Los registros antiguos siguen siendo compatibles y muestran el formato vacío hasta que se editen.
+El formulario permite elegir **AAA, AA, A, Sub-C, C, D, 9 V (PP3), 18650, 21700, 26650, botón (Button cell), CR2032, prismática, bolsa (pouch) u otro**. El formato es independiente de la química y de la capacidad. Se muestra en el título de cada experimento y se incluye en las exportaciones e importaciones XML. Los registros antiguos siguen siendo compatibles y muestran el formato vacío hasta que se editen.
 
 El campo **Identificación de batería** permite distinguir baterías de igual capacidad, por ejemplo «taladro antiguo» o «comprada en MediaMarkt».
 
@@ -67,6 +67,8 @@ En el pie de la aplicación hay un enlace **User manual (README)** que abre este
 La cabecera presenta una imagen SVG única (batería, matraz y rayo sobre fondo rojo) a la izquierda y, a la derecha, el título y subtítulo alineados. El diseño usa Flexbox y se adapta a pantallas pequeñas. El título de la pestaña conserva los iconos.
 
 ## Versionado
+**1.4.2 (25/10/2026):** añadido el formato genérico de pila de botón (Button cell) al selector, manteniendo CR2032 como opción específica.
+
 **1.4.1 (25/10/2026):** tarjetas desplegables con fotografía, identificación, estado, fecha y duración en la vista compacta; detalles y acciones al expandir.
 
 **1.4.0 (25/10/2026):** una fotografía comprimida por experimento (JPEG, 800 px máximo, calidad 55 %), guardada localmente e incluida en exportación e importación XML; compatibilidad con copias antiguas.
