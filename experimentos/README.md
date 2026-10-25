@@ -2,7 +2,7 @@
 
 **English** | [Español](README.es.md)
 
-**Version:** 1.4.1  
+**Version:** 1.4.2  
 **Date:** 25/10/2026  
 **Type:** Progressive Web App (PWA), designed for Android.
 
@@ -34,7 +34,7 @@ Each experiment supports **one photo**, visible even when its card is collapsed.
 Photos are stored locally with the records and included in exported XML as Base64-encoded JPEG data. XML import restores them; older XML backups without photos remain compatible. Photos consume browser storage, so export backups regularly.
 
 ## Battery details
-Supported battery formats include AAA, AA, A, Sub-C, C, D, 9 V (PP3), 18650, 21700, 26650, CR2032, prismatic, pouch and other. Size is separate from chemistry and capacity. The **Battery identification** field distinguishes individual batteries (for example, “old drill battery”).
+Supported battery formats include AAA, AA, A, Sub-C, C, D, 9 V (PP3), 18650, 21700, 26650, Button cell (generic), CR2032, prismatic, pouch and other. Size is separate from chemistry and capacity. The **Battery identification** field distinguishes individual batteries (for example, “old drill battery”).
 
 ## Language
 The app interface is in English. The documentation is available in English and Spanish. Switching documentation language does not change stored data or XML.
@@ -64,6 +64,8 @@ Open https://bitschips.github.io/ejercicios_html/experimentos/ in Chrome. You ca
 **Luis T Escolar** · [Bits Chips YouTube channel](https://www.youtube.com/BitsChips).
 
 ## Version history
+**1.4.2 (25/10/2026):** Added generic Button cell to the battery size selector while retaining CR2032 as a specific option.
+
 **1.4.1 (25/10/2026):** Expandable experiment cards with photo, identification, status, date and duration in the collapsed view; detailed measurements and actions when expanded.
 
 **1.4.0 (25/10/2026):** One automatically compressed JPEG photo per experiment (800 px maximum, 55% quality), stored locally and included in XML import/export, compatible with older backups.
