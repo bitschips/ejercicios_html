@@ -101,3 +101,34 @@ La aplicación es un cuaderno de registro, no un controlador de carga. Usa siemp
 
 ## Vincular autonomía con una carga completada (v1.4.4)
 Al crear o editar un experimento de autonomía, puedes seleccionar opcionalmente una carga completada. Solo aparecen cargas finalizadas, de más reciente a más antigua. Se copian la química, el formato, la capacidad y la identificación de la batería; el voltaje final de carga pasa a ser el voltaje inicial de autonomía. Todos los valores se pueden modificar. Con **None — Enter details manually** puedes introducirlos manualmente. El vínculo se conserva al exportar e importar XML; los experimentos anteriores siguen siendo compatibles.
+
+## Diagrama de funcionamiento de la aplicación
+
+```mermaid
+flowchart TD
+    A["Abrir Battery Experiments"] --> B{"Elegir pestaña"}
+    B --> C["Carga"]
+    B --> D["Autonomía"]
+    C --> E["Crear o editar experimento de carga"]
+    E --> F["Introducir batería, tensión, corriente e inicio"]
+    F --> G["Guardar: En progreso"]
+    G --> H["Añadir fecha final y tensión final"]
+    H --> I["Carga completada"]
+    D --> J["Crear o editar experimento de autonomía"]
+    J --> K{"¿Vincular una carga completada?"}
+    K -->|Sí| L["Seleccionar carga completada"]
+    I -.-> L
+    L --> M["Copiar datos de batería y tensión final como inicial"]
+    K -->|No| N["Introducir datos manualmente"]
+    M --> O["Indicar dispositivo y ajustar datos si procede"]
+    N --> O
+    O --> P["Guardar: En progreso"]
+    P --> Q["Añadir fecha final y tensión final"]
+    Q --> R["Autonomía completada"]
+    I --> S["Tarjetas con foto y detalles desplegables"]
+    R --> S
+    S --> T["Almacenamiento local del navegador"]
+    T <--> U["Exportar / Importar copia XML con fotos y vínculos"]
+```
+
+La vinculación es opcional. Solo se pueden seleccionar cargas completadas y los datos copiados son editables. Ambos tipos de experimentos admiten una foto comprimida, tarjetas desplegables y copias de seguridad XML.
