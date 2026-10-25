@@ -130,3 +130,5 @@ flowchart TD
 ```
 
 The charge link is optional. Only completed charging experiments can be selected; all copied values remain editable. Both types of experiments support one compressed photo, expandable cards, and XML backup.
+
+[Open the interactive Mermaid workflow diagram](diagram.html) · [View Mermaid source in this manual](#application-workflow-diagram).
