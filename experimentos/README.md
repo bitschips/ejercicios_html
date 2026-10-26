@@ -1,6 +1,6 @@
 # 🔬🔋 Battery Charging and Autonomy Experiments
 
-**English** | [Español](README.es.md)
+**English** | [Español](README.es.md) | [Українська](README.uk.md)
 
 **Version:** 1.4.4  
 **Date:** 25/10/2026  
