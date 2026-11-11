@@ -1,9 +1,9 @@
-[English](README.md) | **Español** | [Українська](README.uk.md)
+[🇬🇧 English](README.md) | **🇪🇸 Español** | [🇺🇦 Українська](README.uk.md) | [🇦🇩 Català](README.ca.md) | [🇯🇵 日本語](README.ja.md)
 
 # 🔬🔋 Experimentos de carga y autonomía de baterías
 
-**Versión:** 1.4.4  
-**Fecha:** 25/10/2026  
+**Versión:** 1.4.6  
+**Fecha:** 11/11/2026  
 **Tipo:** aplicación web progresiva (PWA), pensada para Android.
 
 ## Descripción
@@ -67,6 +67,8 @@ En el pie de la aplicación hay un enlace **User manual (README)** que abre este
 La cabecera presenta una imagen SVG única (batería, matraz y rayo sobre fondo rojo) a la izquierda y, a la derecha, el título y subtítulo alineados. El diseño usa Flexbox y se adapta a pantallas pequeñas. El título de la pestaña conserva los iconos.
 
 ## Versionado
+**1.4.6 (11/11/2026):** documentación en cinco idiomas con banderas, enlaces de navegación y accesos desde la aplicación.
+
 **1.4.4 (25/10/2026):** diferenciadas las pilas de botón genéricas y recargables, conservando CR2032.
 
 **1.4.2 (25/10/2026):** añadido el formato genérico de pila de botón (Button cell) al selector, manteniendo CR2032 como opción específica.
