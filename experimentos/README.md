@@ -1,6 +1,6 @@
 # 🔬🔋 Battery Charging and Autonomy Experiments
 
-**🇬🇧 English** | [🇪🇸 Español](README.es.md) | [🇯🇵 日本語](README.ja.md)
+**🇬🇧 English** | [🇪🇸 Español](README.es.md)
 
 **Version:** 1.4.6  
 **Date:** 11/11/2026  
@@ -37,7 +37,7 @@ Photos are stored locally with the records and included in exported XML as Base6
 Supported battery formats include AAA, AA, A, Sub-C, C, D, 9 V (PP3), 18650, 21700, 26650, Button cell (generic), Rechargeable button cell, CR2032, prismatic, pouch and other. Size is separate from chemistry and capacity. The **Battery identification** field distinguishes individual batteries (for example, “old drill battery”).
 
 ## Language
-The app interface is in English. The documentation is available in English, Spanish, Ukrainian, Catalan and Japanese. Switching documentation language does not change stored data or XML.
+The app interface is in English. The documentation is available in English and Spanish. Switching documentation language does not change stored data or XML.
 
 ## Local storage and XML backups
 Records and photos are saved in your browser's **localStorage**, not on GitHub or a server. They persist across normal browser restarts but may be lost if site data is cleared, the browser is uninstalled, or the phone is reset. Clearing cached files alone does not normally remove localStorage.
