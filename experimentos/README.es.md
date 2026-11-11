@@ -1,4 +1,4 @@
-[🇬🇧 English](README.md) | **🇪🇸 Español** | [🇺🇦 Українська](README.uk.md) |
+[🇬🇧 English](README.md) | **🇪🇸 Español** ]
 
 # 🔬🔋 Experimentos de carga y autonomía de baterías
 
