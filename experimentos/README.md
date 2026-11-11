@@ -1,9 +1,9 @@
 # 🔬🔋 Battery Charging and Autonomy Experiments
 
-**English** | [Español](README.es.md) | [Українська](README.uk.md)
+**🇬🇧 English** | [🇪🇸 Español](README.es.md) | [🇺🇦 Українська](README.uk.md) | [🇦🇩 Català](README.ca.md) | [🇯🇵 日本語](README.ja.md)
 
-**Version:** 1.4.4  
-**Date:** 25/10/2026  
+**Version:** 1.4.6  
+**Date:** 11/11/2026  
 **Type:** Progressive Web App (PWA), designed for Android.
 
 ## Overview
@@ -37,7 +37,7 @@ Photos are stored locally with the records and included in exported XML as Base6
 Supported battery formats include AAA, AA, A, Sub-C, C, D, 9 V (PP3), 18650, 21700, 26650, Button cell (generic), Rechargeable button cell, CR2032, prismatic, pouch and other. Size is separate from chemistry and capacity. The **Battery identification** field distinguishes individual batteries (for example, “old drill battery”).
 
 ## Language
-The app interface is in English. The documentation is available in English and Spanish. Switching documentation language does not change stored data or XML.
+The app interface is in English. The documentation is available in English, Spanish, Ukrainian, Catalan and Japanese. Switching documentation language does not change stored data or XML.
 
 ## Local storage and XML backups
 Records and photos are saved in your browser's **localStorage**, not on GitHub or a server. They persist across normal browser restarts but may be lost if site data is cleared, the browser is uninstalled, or the phone is reset. Clearing cached files alone does not normally remove localStorage.
@@ -59,11 +59,16 @@ Open https://bitschips.github.io/ejercicios_html/experimentos/ in Chrome. You ca
 - `brand-icon.svg`: header illustration.
 - `README.md`: English manual.
 - `README.es.md`: Spanish manual.
+- `README.uk.md`: Ukrainian manual.
+- `README.ca.md`: Catalan manual.
+- `README.ja.md`: Japanese manual.
 
 ## Author
 **Luis T Escolar** · [Bits Chips YouTube channel](https://www.youtube.com/BitsChips).
 
 ## Version history
+**1.4.6 (11/11/2026):** Five-language documentation with flag navigation and application footer links.
+
 **1.4.4 (25/10/2026):** Separate generic and rechargeable button-cell formats; CR2032 remains available.
 
 **1.4.2 (25/10/2026):** Added generic Button cell to the battery size selector while retaining CR2032 as a specific option.
