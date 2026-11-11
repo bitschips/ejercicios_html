@@ -1,6 +1,6 @@
 # 🔬🔋 バッテリーの充電・稼働時間実験
 
-[🇬🇧 English](README.md) | [🇪🇸 Español](README.es.md) |  **🇯🇵 日本語**
+[🇬🇧 English](README.md) | [🇪🇸 Español](README.es.md) |  **🇯🇵 日本語**  
 
 **バージョン:** 1.4.6  
 **日付:** 2026/11/11  
