@@ -4,7 +4,7 @@ const KEY='experimentos-pilas-v1',fields=['tipo','formato','capacidad','notasBat
   const safe=v=>{
     let s=String(v??'');
     // Avoid spreadsheet formula execution when users open exported notes in Excel/Calc.
-    if(/^[\\t\\r\\n ]*[=+@]/.test(s)||/^[\\t\\r\\n ]*-(?!=?\\d)/.test(s))s="'"+s;
+    if(/^[\t\r\n ]*[=+@]/.test(s)||/^[\t\r\n ]*-(?!=?\d)/.test(s))s="'"+s;
     return '"'+s.replace(/"/g,'""')+'"';
   };
   const rows=[cols.map(safe).join(',')];
@@ -25,7 +25,7 @@ const KEY='experimentos-pilas-v1',fields=['tipo','formato','capacidad','notasBat
       rows.push(values.map(safe).join(','));
     });
   }
-  const blob=new Blob(['\\uFEFF'+rows.join('\\r\\n')+'\\r\\n'],{type:'text/csv;charset=utf-8'});
+  const blob=new Blob(['\uFEFF'+rows.join('\r\n')+'\r\n'],{type:'text/csv;charset=utf-8'});
   const url=URL.createObjectURL(blob),link=document.createElement('a');
   link.href=url;link.download='experimentos_completos_'+new Date().toISOString().slice(0,10)+'.csv';
   link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
