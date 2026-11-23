@@ -2,8 +2,8 @@
 
 **🇬🇧 English** | [🇪🇸 Español](README.es.md)
 
-**Version:** 1.4.6  
-**Date:** 11/11/2026  
+**Version:** 1.4.8  
+**Date:** 23/11/2026  
 **Type:** Progressive Web App (PWA), designed for Android.
 
 ## Overview
@@ -137,3 +137,6 @@ flowchart TD
 The charge link is optional. Only completed charging experiments can be selected; all copied values remain editable. Both types of experiments support one compressed photo, expandable cards, and XML backup.
 
 [Open the interactive Mermaid workflow diagram](diagram.html) · [View Mermaid source in this manual](#application-workflow-diagram).
+
+## Full CSV export (v1.4.8 · 23/11/2026)
+**Export CSV (all data)** exports every experiment from both tabs, not only voltage samples. It includes IDs, type, linked charging experiment, chemistry, size, capacity, voltages, currents, timestamps, device, notes, and the complete JPEG data URL for the photo (large text field). When individual voltage readings are present in a record's `mediciones` array, a separate CSV row is produced for each reading, with `medicion_id`, `medicion_fecha`, elapsed hours, and `medicion_tension`; common experiment fields are repeated, while the large photo field is included in the first row only. Experiments without readings get one row. CSV uses comma delimiters, UTF-8 with BOM, CRLF lines and escaped quoted values. CSV is for analysis in Excel/LibreOffice/Colab; **XML remains the supported full-fidelity restoration/import backup**. The CSV export does not implement CSV import.
