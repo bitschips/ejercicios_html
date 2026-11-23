@@ -2,8 +2,8 @@
 
 # 🔬🔋 Experimentos de carga y autonomía de baterías
 
-**Versión:** 1.4.6  
-**Fecha:** 11/11/2026  
+**Versión:** 1.4.8  
+**Fecha:** 23/11/2026  
 **Tipo:** aplicación web progresiva (PWA), pensada para Android.
 
 ## Descripción
@@ -136,3 +136,6 @@ flowchart TD
 La vinculación es opcional. Solo se pueden seleccionar cargas completadas y los datos copiados son editables. Ambos tipos de experimentos admiten una foto comprimida, tarjetas desplegables y copias de seguridad XML.
 
 [Ver el diagrama de funcionamiento Mermaid](diagram.html) · [Ver el código Mermaid en este manual](#diagrama-de-funcionamiento-de-la-aplicación).
+
+## Exportación CSV completa (v1.4.8 · 23/11/2026)
+El botón **Export CSV (all data)** exporta todos los experimentos de carga y autonomía, no solo las mediciones. Incluye identificadores, vínculos entre experimentos, características de la batería, fechas, tensiones, intensidades, dispositivo, observaciones y fotografías en formato JPEG Base64 dentro de una columna de texto (puede ocupar mucho espacio). Si un experimento tiene lecturas en el array `mediciones`, se genera una fila por lectura con identificador, fecha, horas transcurridas y tensión; los campos comunes se repiten, pero la fotografía se escribe solo en la primera fila para reducir el tamaño. Los experimentos sin lecturas ocupan una fila. CSV en UTF-8, separado por comas y entrecomillado, para Excel, LibreOffice o Google Colab. **La exportación/importación XML sigue siendo la vía recomendada para restaurar copias completas**; todavía no se admite importar archivos CSV.
